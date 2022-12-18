@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two stage carousel | Advanced CSS Selectors </title>
+  <style>
+    body {
+      background-color: #234;
+    }
+    .carousel {
+      width: 840px;
+      /*border: 5px solid green;*/
+
+      /*NEW- center a block HORIZONTALY*/
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      /*NEW*/
+      overflow: hidden;
+      box-shadow: 0 0 10px 2px #111 ;
+      
+    }
+    .carousel .slide {
+      width: 2600px;
+      /*border: 3px solid red;*/
+      transition: 1s;
+      
+    }
+    .carousel .controls {
+      text-align: center;
+    }
+    .carousel .controls a {
+      color: white;
+      text-decoration: none;
+
+    }
+    .carousel .controls a:hover {
+      color: #ffd166;
+      
+    }
+
+    .carousel #page-first:target .slide {
+      transform: translateX(0px);
+    }
+    .carousel #page-second:target .slide {
+      transform: translateX(-840px);
+    }
+    .carousel #page-third:target .slide {
+      transform: translateX(-1680px);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div id="page-first">
+      <div id="page-second">
+        <div id="page-third">
+          <div class="slide">
+            <img src="https://i.picsum.photos/id/927/280/400.jpg?hmac=h4QOTJvF0NzwNjlrCanr0fhbRdYsWTJDq2CukiKZcbM" alt=""><img src="https://i.picsum.photos/id/35/280/400.jpg?hmac=LHJaojGq6n0WwX-whGcGdbuTMvPPWTdeoZeX7D1O--4" alt=""><img src="https://i.picsum.photos/id/923/280/400.jpg?hmac=eTKbmzhwloRBIq3XY79X235D-VYGyhIAYhy5svnN5c8" alt=""><img src="https://i.picsum.photos/id/975/280/400.jpg?hmac=KPKLS-Ovss5RsK8ryRLKPNgD2qk3czerVL6-wGsx3tE" alt=""><img src="https://i.picsum.photos/id/952/280/400.jpg?hmac=CSU4ETgxf65DMZ4Tlt9npNBKThbXE5t4UPFeRi9XS4I" alt=""><img src="https://i.picsum.photos/id/329/280/400.jpg?hmac=HDaRd9ZnA3oh0_ZGVnTGFmLgCbBP67dKPJaFc9MIrSk" alt=""><img src="https://i.picsum.photos/id/40/280/400.jpg?hmac=TYROZ0gZA9mO2efYfrd3Asknt9fAERDL2iUbQioApUk" alt=""><img src="https://i.picsum.photos/id/680/280/400.jpg?hmac=blb96d5-LKQOtQD2phMFMs1NJVz-aIWXj-HjmB9cIrA" alt=""><img src="https://i.picsum.photos/id/486/280/400.jpg?hmac=h6EBwpEmFHmgYSCh5sKZSMcU-_CPjRXt2Gygy1D9ZU4" alt="">
+          </div>
+        </div> 
+    </div>
+    <!-- 
+      HW1 :
+      left, right -> symbols/arrows + colors, effects
+
+      HW2 : WHAT IF 9 PICTURES?
+      [123|456|789]
+      controls [1][2][3]
+    -->
+    <div class="controls">
+      <a href="#page-first">[1]</a>
+      <a href="#page-second">[2]</a>
+      <a href="#page-third">[3]</a>
+    </div>
+
+  </div>
+</body>
+</html>
